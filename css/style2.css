@@ -1,0 +1,463 @@
+
+@font-face {
+    font-family: 'nautikregular';
+    src: url('../fonts/nautik-regular-webfont.eot');
+    src: url('../fonts/nautik-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-regular-webfont.woff') format('woff'),
+         url('../fonts/nautik-regular-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-regular-webfont.svg#nautikregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nautikbold';
+    src: url('../fonts/nautik-bold-webfont.eot');
+    src: url('../fonts/nautik-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nautik-bold-webfont.woff') format('woff'),
+         url('../fonts/nautik-bold-webfont.ttf') format('truetype'),
+         url('../fonts/nautik-bold-webfont.svg#nautikbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'colaboratelightregular';
+    src: url('../fonts/ColabLig-webfont.eot');
+    src: url('../fonts/ColabLig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ColabLig-webfont.woff') format('woff'),
+         url('../fonts/ColabLig-webfont.ttf') format('truetype'),
+         url('../fonts/ColabLig-webfont.svg#colaboratelightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@media screen{
+	body {
+		font-family: 'colaboratelightregular', sans-serif;
+		font-size: 1em;
+		background-color: white;
+		color: #011A3E;
+		background-image:url('../images/stardust.png');
+	}
+
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+		padding: 20px 20px 15px 20px;
+	}
+
+	header {
+		background:white url('../images/old_moon.png');
+	}
+
+	h1 {
+		font-family: 'nautikbold', sans-serif;
+		font-weight: 700;
+		color: #9A6F20;
+		margin-top: -20px;
+	}
+
+	h2 {
+		font-family: 'nautikbold', sans-serif;
+		color: #3B7897;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-family: 'nautikbold', sans-serif;
+		margin-bottom: -10px;
+		font-weight: 600;
+	}
+
+	p a {
+		color: #3B7897;
+		text-decoration: underline;
+	}
+
+	p ul li a {
+		color: #3B7897;
+		text-decoration: underline;
+	}
+
+	p a:hover {
+		color: #3B7897;
+	}
+
+	p a:visited {
+		color: #011A3E;
+	}
+
+	.email-address {
+		color: #3B7897;
+	}
+
+	/* Header Logo and Searchbar */
+	#logo {
+		width: 90px;
+		height: 120px;
+		display: inline-block;
+		float: left;
+	}
+
+	/* Main Navigation Bar */
+	nav {
+		font-family: 'nautikbold', sans-serif;
+		font-size: 1.2em;	
+		color: #fff;
+		text-transform: uppercase;
+		width: 150px;
+  		float: left;
+  		display: inline;
+  		margin: -30px 0 0 -75px;
+  		padding: 0;
+  		position: fixed;
+  		
+	}
+
+	nav a {
+		text-decoration: none;
+		color: #444;
+		float: left;
+  		display: inline;
+  		padding:10px 10px;
+  		background: #ddd;
+  		margin:5px 5px;
+	}
+
+	nav a.logoclear {
+		background: transparent;
+		padding-left:0;
+		margin-left:0;
+	}
+
+	nav a.logoclear:hover {
+		background: transparent;
+		padding-left:0;
+		margin-left:0;
+	}
+
+	nav ul li {
+	list-style: none;
+	
+	}	
+
+	nav a:hover {
+	color: #444;
+	background: #bbb;
+	
+}
+
+/************************************************************************************
+NAV
+*************************************************************************************/
+
+
+
+
+	/* Main Content Section */
+	.main {
+		width: 75%;
+		padding: 20px;
+		display: inline;
+		float: right;
+		background-color:rgba(250, 250, 250, 0.5);
+		margin-top:10px;
+	}
+
+	#text {
+		width: 75%;
+		float: left;
+		font-size: 1.2em;
+
+	}
+
+	#text p {
+		padding-right: 30px;
+	}
+
+
+	/* Footer */
+	footer{	
+		background-color: #3B7897;
+		clear:both;
+		width: 100%;
+		color: #fff;
+		font-size: 1em;
+		font-weight: 300;
+	}
+
+	footer p{
+		padding: 0px 20px 0px 10px;
+	}
+
+	footer p:first-child {
+		padding-top: 10px;
+	}
+
+	footer p:last-child {
+		padding-bottom: 10px;
+	}
+}
+
+/* IMAGE SLIDER CSS - adapted from CSS provided by http://www.menucool.com for the image slider javascript */
+
+	#slider {   
+		background-color: #E7E4DB;
+		border: 10px solid #E7E4DB;
+		float: left;
+		width: 550px;
+		height: 320px;
+		clear:none;
+		margin: 0px 30px 50px 0px;
+		position: relative;
+	}
+	
+	#slider, #slider div.sliderInner {
+    width:550px;height:320px;/* Must be the same size as the slider images */
+}
+
+	/* image wrapper */
+	#slider a.imgLink, #slider div.video {
+		z-index:2;
+		position:absolute;
+		text-align:center;
+	}
+	
+	/* Caption styles */
+	#slider div.mc-caption-bg, #slider div.mc-caption-bg2 {
+		position:absolute;
+		width:340px;
+	
+		height:auto;
+		padding:10px 0;/* 10px will increase the height.*/
+		left:0px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+		top:0px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
+		z-index:3;
+		overflow:hidden;
+		font-size: 0;
+	}
+	
+	#slider div.mc-caption-bg {
+		/* NOTE: Its opacity is to be set through the sliderOptions.captionOpacity setting in the js-image-slider.js file.*/
+		background:#E7E4DB;/* or any other colors such as White, or: background:none; */
+	}
+	
+	#slider div.mc-caption-bg2 {
+		background:none;
+	}
+	
+	#slider div.mc-caption, #slider div.mc-caption p{
+		font-family: 'ashburylight', serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size:32px;
+		line-height:1em;
+		color: #281915;
+		z-index:4;
+		text-align:left;
+		background:none;
+		margin: 20px 5px 10px 20px;
+	}
+	
+	
+	#slider div.mc-caption a {
+		color:#281915;
+	}
+	
+	
+	/* ------ built-in navigation bullets wrapper ------*/
+	/* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
+	#slider div.navBulletsWrapper  {
+		top:290px;/* Its position is relative to the #slider */
+		text-align:right;
+		background:none;
+		position:relative;
+		z-index:100;
+	}
+	
+	/* each bullet */
+	#slider div.navBulletsWrapper div {
+		width:11px; height:11px;
+		font-size:0;color:White;/*hide the index number in the bullet element*/
+		background:transparent url(../images/bullet3.png) no-repeat 0 0;
+		display:inline-block; *display:inline; zoom:1;
+		overflow:hidden;cursor:pointer;
+		margin:0 6px;/* set distance between each bullet*/
+	}
+	
+	#slider div.navBulletsWrapper div.active {
+		background-position:0 -11px;
+	}
+	
+	
+	/* --------- Others ------- */
+	
+	#slider div.loading {
+		width:100%; height:100%;
+		background:transparent url(loading.gif) no-repeat 50% 50%;
+		filter: alpha(opacity=60);
+		opacity:0.6;
+		position:absolute;
+		left:0;
+		top:0; 
+		z-index:9;
+	}
+	
+	#slider img, #slider>b, #slider a>b {
+		position:absolute; 
+		border:none; 
+		display:none;
+	}
+	
+	#slider div.sliderInner {
+		overflow:hidden; 
+		-webkit-transform: rotate(0.000001deg);/* fixed the Chrome not crop border-radius bug*/
+		position:absolute; top:0; left:0;
+	}
+	
+	#slider>a, #slider video, #slider audio {
+		display:none;
+	}
+
+
+/* Media Queries */
+@media screen and (max-width: 860px){
+	body {
+		font-size: 0.8em;
+	}
+
+	nav {
+		font-size: 1.1em;
+	}
+
+	#logo {
+		height: 120px;
+		width: 90px;
+	}
+
+	#welcome-road h3 {
+		font-size: 1.7em;
+		white-space: normal;
+	}
+
+	img {
+		height: auto;
+	}
+
+	#newsearch {
+		margin: 5px;
+		display: block;
+		clear: both;
+		float: left;
+		font-size: 1.3em;
+	}
+
+	#text {
+		width:100%;
+		clear: both;
+		white-space: normal;
+	}
+
+	
+}
+
+@media screen and (max-width: 426px) {
+	/* nav-wrap */
+	#nav-wrap {
+		position: relative;
+	}
+
+	/* menu icon */
+	#menu-icon {
+		color: #000;
+		width: 42px;
+		height: 30px;
+		background: #ecebeb url(../images/menu-icon.png) no-repeat 10px center;
+		padding: 8px 10px 0 42px;
+		cursor: pointer;
+		border: solid 1px #666;
+		display: block; /* show menu icon */
+	}
+	#menu-icon:hover {
+		background-color: #f8f8f8;
+	}
+	#menu-icon.active {
+		background-color: #bbb;
+	}
+	
+	/* main nav */
+	#nav {
+		clear: both;
+		position: absolute;
+		top: 38px;
+		width: 130px;
+		z-index: 10000;
+		padding: 5px;
+		background: #f8f8f8;
+		border: solid 1px #999;
+		display: none; /* visibility will be toggled with jquery */
+	}
+	#nav li {
+		clear: both;
+		float: none;
+		margin: 10px 0 15px 10px;
+	}
+	#nav a, 
+	#nav ul a {
+		font: inherit;
+		background: none;
+		display: inline;
+		padding: 0;
+		color: #666;
+		border: none;
+		font-size:1.5em;
+	}
+	#nav a:hover, 
+	#nav ul a:hover {
+		background: none;
+		color: #000;
+	}
+	
+	/* dropdown */
+	#nav ul {
+		width: auto;
+		position: static;
+		display: block;
+		border: none;
+		background: inherit;
+	}
+	#nav ul li {
+		margin: 3px 0 3px 15px;
+	}
+
+}
+
+
+
+}
+
+@media print {
+	header {
+		display: none;
+	}
+
+	#welcome-road img {
+		display: none;
+	}
+
+
+	footer {
+		font-size: 0.9em;
+		border-top: 1px solid;
+		margin-top: 1cm;
+	}
+}
+
+
+
+
+
