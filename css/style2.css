@@ -160,7 +160,7 @@ NAV
 
 	/* Main Content Section */
 	.main {
-		width: 75%;
+		width: 85%;
 		padding: 20px;
 		display: inline;
 		float: right;
@@ -202,6 +202,35 @@ NAV
 		padding-bottom: 10px;
 	}
 }
+/* skills columns - */
+	#skillcol1{
+		display:block;
+		float:left;
+		clear:none;
+		width:40%;
+	}
+
+	#skillcol2{
+		display:block;
+		float:left;
+		clear:none;
+		width:40%;
+
+	}
+	#skillp{
+		clear:both;
+	}
+
+	#skillcol1 ul, #skillcol2 ul{
+		list-style: none;
+		padding-left:0;
+	}
+
+
+
+
+
+
 
 /* IMAGE SLIDER CSS - adapted from CSS provided by http://www.menucool.com for the image slider javascript */
 
