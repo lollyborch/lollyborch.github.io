@@ -10,4 +10,4 @@ $(window).resize(function(){
 })
 .resize();//trigger the resize event on page load
 
-//taken from http://stackoverflow.com/questions/8943816/changing-a-class-name-with-jquery-given-a-specific-width-range-media-query
+//adapted from http://stackoverflow.com/questions/8943816/changing-a-class-name-with-jquery-given-a-specific-width-range-media-query
