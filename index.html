@@ -1,108 +1,87 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Lilly HB Portfolio</title>
-  <!--Stylesheet-->
-    <link href="css/normalize.css" type="text/css" rel="stylesheet" />
-  <link href="css/style2.css" type="text/css" rel="stylesheet" />
-    <!--Google fonts link-->
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'> 
-    <!--jQuery script-->
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-</head>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lilly HB</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/media.js"></script>
+	</head>
+	<body>
+		<div class="container">
 
-<body>
-<div class="wrapper">
-    <header>
-        
-            
-    </header>
+			<header class="row">
+				<div class="col-md-6">
+					<a class="logoclear" href="index.html"><img src="images/logo.png" onmouseover="this.src='images/logohover.png'" onmouseout="this.src='images/logo.png'" alt="LHB logo"  id='logo' /></a>
+				</div>
+				<div id="mediaq" class="col-md-6 text-right">
+					<h1 class="teal largeness">Lilly H Borchardt</h1>
+					<h4>Front-end Ninja</h4>
+				</div>
+			</header>
 
-    <!--Main Navigation-->
-        <nav>
-          <ul>
-            <li><a class="logoclear" href="index.html"><img src="images/logo1.png" onmouseover="this.src='images/logohover1.png'" onmouseout="this.src='images/logo1.png'" alt="LHB logo"  id='logo' /></a></li>
-            <li><a href="#abouta">about</a></li>
-            <li><a href="#portfolioa">portfolio</a></li>
-            <li><a href="#resumea">resume</a></li>
-            <li><a href="#contacta">contact</a></li>
-            <li><a href="#sociala">social</a></li>
-          </ul>
-        </nav>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
 
-    <!--Main Content section-->
-    <section id='welcome-road'>
-        
-    </section>
-    
-    <section class='main'>
-        <article id='about'>
-          <a name="abouta"></a>
-          <h1>ABOUT</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sapien accumsan, ornare leo eu, egestas turpis. Proin feugiat enim in tincidunt luctus. In hac habitasse platea dictumst. Ut nec elementum mi, volutpat volutpat erat. Vivamus eleifend condimentum egestas. Nam nibh tellus, placerat ac nisl vel, iaculis commodo ligula. Phasellus nulla mauris, cursus eget tempus facilisis, gravida condimentum leo. Nam aliquet fermentum elit eu maximus. Nulla quis mi pellentesque, rhoncus leo imperdiet, tincidunt sem. Praesent eros lacus, scelerisque vel sagittis sed, tempus non justo. Vivamus laoreet pharetra nunc eget auctor. Integer orci mauris, aliquet suscipit ex in, elementum viverra urna. Nulla a sapien dictum, auctor sem ac, semper velit. Cras sit amet sollicitudin arcu. Mauris a mi imperdiet, accumsan justo sit amet, gravida enim. Morbi convallis ante id orci sodales, vitae ullamcorper lectus lobortis.</p>
-           
-        </article>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-responsive" src="images/placekitten960.jpg" alt="Main Puppy image">
+				</div>
+			</div>
 
-        <article id='portfolio'>
-          <a name="portfolioa"></a>
-          <h1>PORTFOLIO</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sapien accumsan, ornare leo eu, egestas turpis. Proin feugiat enim in tincidunt luctus. In hac habitasse platea dictumst. Ut nec elementum mi, volutpat volutpat erat. Vivamus eleifend condimentum egestas. Nam nibh tellus, placerat ac nisl vel, iaculis commodo ligula. Phasellus nulla mauris, cursus eget tempus facilisis, gravida condimentum leo. Nam aliquet fermentum elit eu maximus. Nulla quis mi pellentesque, rhoncus leo imperdiet, tincidunt sem. Praesent eros lacus, scelerisque vel sagittis sed, tempus non justo. Vivamus laoreet pharetra nunc eget auctor. Integer orci mauris, aliquet suscipit ex in, elementum viverra urna. Nulla a sapien dictum, auctor sem ac, semper velit. Cras sit amet sollicitudin arcu. Mauris a mi imperdiet, accumsan justo sit amet, gravida enim. Morbi convallis ante id orci sodales, vitae ullamcorper lectus lobortis.</p>
-           
-        </article>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Featured Work</h2>
+				</div>
+			</div>
+			<div class="text-center">
+				<div class="col-md-4">
+					<img class="img-responsive" src="images/placepuppy555.jpg" data-toggle="modal" data-target="#project1" alt="This is an image">
+					<h3 class="text-uppercase">Image Heading</h3>
+					<p><a href="#">Web Address - Something about kittens</a></p>
+				</div>
+				<div class="col-md-4">
+					<img class="img-responsive" src="images/placepuppy555.jpg" alt="This is an image">
+					<h3 class="text-uppercase">Image Heading</h3>
+					<p><a href="#">Web Address - Something about kittens</a></p>
+				</div>
+				<div class="col-md-4">
+					<img class="img-responsive" src="images/placepuppy555.jpg" alt="This is an image">
+					<h3 class="text-uppercase">Image Heading</h3>
+					<p><a href="#">Web Address - Something about kittens</a></p>
+				</div>
+			</div>
+		</div>
 
-        <article id='resume'>
-          <a name="resumea"></a>
-          <h1>RESUME</h1>
-          <h2>Skills</h2>
-          <div id="skillcol1">
-            <ul>
-              <li> <img src="images/Id.png" alt="InDesign 5 stars" /></li>
-              <li> <img src="images/Ai.png" alt="Illustrator 5 stars" /></li>
-              <li> <img src="images/Ps.png" alt="Photoshop 5 stars" /></li>
-              <li> <img src="images/Fw.png" alt="Fireworks 5 stars" /></li>
-              <li> <img src="images/Fl.png" alt="Flash 3 stars" /></li>
-            </ul>
-          </div>
-          <div id="skillcol2">
-            <ul>
-              <li> <img src="images/HTML.png" alt="HTML 4 stars" /></li>
-              <li> <img src="images/CSS.png" alt="CSS 4 stars" /></li>
-              <li> <img src="images/Js.png" alt="Javascript 3 stars" /></li>
-              <li> <img src="images/jQ.png" alt="jQuery 3 stars" /></li>
-            </ul>
-          </div>
 
-          <div id="skillp">
-          <p>THIS IS OTHER Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sapien accumsan, ornare leo eu, egestas turpis. Proin feugiat enim in tincidunt luctus. In hac habitasse platea dictumst. Ut nec elementum mi, volutpat volutpat erat. Vivamus eleifend condimentum egestas. Nam nibh tellus, placerat ac nisl vel, iaculis commodo ligula. Phasellus nulla mauris, cursus eget tempus facilisis, gravida condimentum leo. Nam aliquet fermentum elit eu maximus. Nulla quis mi pellentesque, rhoncus leo imperdiet, tincidunt sem. Praesent eros lacus, scelerisque vel sagittis sed, tempus non justo. Vivamus laoreet pharetra nunc eget auctor. Integer orci mauris, aliquet suscipit ex in, elementum viverra urna. Nulla a sapien dictum, auctor sem ac, semper velit. Cras sit amet sollicitudin arcu. Mauris a mi imperdiet, accumsan justo sit amet, gravida enim. Morbi convallis ante id orci sodales, vitae ullamcorper lectus lobortis.</p>
-          </div>
-           
-        </article>
 
-        <article id='contact'>
-          <a name="contacta"></a>
-          <h1>CONTACT</h1>
-          <a href="index.html"><img src="images/LHB-cat1.png" onmouseover="this.src='images/LHB-cat.png'" onmouseout="this.src='images/LHB-cat1.png'" alt="LHB cat"  id='logo-cat' /></a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sapien accumsan, ornare leo eu, egestas turpis. Proin feugiat enim in tincidunt luctus. In hac habitasse platea dictumst. Ut nec elementum mi, volutpat volutpat erat. Vivamus eleifend condimentum egestas. Nam nibh tellus, placerat ac nisl vel, iaculis commodo ligula. Phasellus nulla mauris, cursus eget tempus facilisis, gravida condimentum leo. Nam aliquet fermentum elit eu maximus. Nulla quis mi pellentesque, rhoncus leo imperdiet, tincidunt sem. Praesent eros lacus, scelerisque vel sagittis sed, tempus non justo. Vivamus laoreet pharetra nunc eget auctor. Integer orci mauris, aliquet suscipit ex in, elementum viverra urna. Nulla a sapien dictum, auctor sem ac, semper velit. Cras sit amet sollicitudin arcu. Mauris a mi imperdiet, accumsan justo sit amet, gravida enim. Morbi convallis ante id orci sodales, vitae ullamcorper lectus lobortis.</p>
-           
-        </article>
+		<!-- Modal -->
 
-        <article id='social'>
-          <a name="sociala"></a>
-          <h1>SOCIAL</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sapien accumsan, ornare leo eu, egestas turpis. Proin feugiat enim in tincidunt luctus. In hac habitasse platea dictumst. Ut nec elementum mi, volutpat volutpat erat. Vivamus eleifend condimentum egestas. Nam nibh tellus, placerat ac nisl vel, iaculis commodo ligula. Phasellus nulla mauris, cursus eget tempus facilisis, gravida condimentum leo. Nam aliquet fermentum elit eu maximus. Nulla quis mi pellentesque, rhoncus leo imperdiet, tincidunt sem. Praesent eros lacus, scelerisque vel sagittis sed, tempus non justo. Vivamus laoreet pharetra nunc eget auctor. Integer orci mauris, aliquet suscipit ex in, elementum viverra urna. Nulla a sapien dictum, auctor sem ac, semper velit. Cras sit amet sollicitudin arcu. Mauris a mi imperdiet, accumsan justo sit amet, gravida enim. Morbi convallis ante id orci sodales, vitae ullamcorper lectus lobortis.</p>
-           
-        </article>
+		<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+		      </div>
+		      <div class="modal-body">
+		        <img class="img-responsive" src="http://placepuppy.it/555/333">
+		        This was my first project in this class. I learned a lot about HTML and CSS.
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
 
-        
-        
-        
-    </section>
 
-    <footer>
-      
-    </footer>
-</div>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
 </html>
