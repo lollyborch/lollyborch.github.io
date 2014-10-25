@@ -1,0 +1,51 @@
+/* colours Red #EC185B Light Red #f69680 Yellow #FDB813 Light Yellow #FFD88F 
+Teal #00A79D Light Teal #78CCD0 Slate #C0BEB7 Cloud #EAE5DA Dark Indigo #232439*/
+
+/*Backgrounds by <a href="http://subtlepatterns.com/">Subtle Patterns</a>*/
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background-color: white;
+	color: #333;
+	background-image:url('../images/old_moon.png');
+}
+
+/*.bg{
+	background-color:rgba(250, 250, 250, 0.9);
+	padding-bottom:10px;
+	margin-left:1px;
+	margin-right:1px;
+	margin-top:20px;
+}*/
+
+header a.logoclear {
+	background: transparent;
+}
+
+header a.logoclear img {
+	max-width:100px;
+	padding-top: 20px;
+
+}
+
+.teal {
+	color: #00A79D;
+}
+
+.largeness {
+	font-size: 4em;
+}
+
+.littlelarge {
+	font-size: 2.5em;
+}
+
+p a:hover{
+	color: #EC185B;
+}
+
+.lines{
+	border-top: 2px dotted #999;
+}
