@@ -49,3 +49,7 @@ p a:hover{
 .lines{
 	border-top: 2px dotted #999;
 }
+
+ul li a {
+	font-size: 2em;
+}
