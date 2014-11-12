@@ -64,11 +64,6 @@ bio.display = function() {
   }
 };
 
-
-
-
-
-
 var education = {
 	"uni": [
 		{
@@ -135,7 +130,6 @@ var education = {
 		}
 	]
 
-
 };
 
 var work = {
@@ -192,12 +186,11 @@ var projects = {
     {
       "title" : "Interactive Resume",
       "date" : "2014",
-      "pic" : ["images/project2.png"],
+      "pic" : ["images/project3.png"],
       "description" : "Udacity Project 2 - Javascript <a href='http://lollyborch.github.io/P2/P2.html'>http://lollyborch.github.io/P2/P2.html</a>"
     }
   ]
 };
-
 
 function displayWork() {
 	for (job in work.design) {
