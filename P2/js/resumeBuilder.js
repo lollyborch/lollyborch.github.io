@@ -1,43 +1,72 @@
-var html = '<script src="http://hackyourwebsite.com/eviljavascript.js"></script>';
-
-var charEscape = function(_html) {
-    var newHTML = _html;
-    newHTML = encodeURI(newHTML);
-    // How will you make sure that newHTML doesn't contain any < or > ?
-    // Your code goes here!
-
-    // Don't delete this line!
-    return newHTML;
-};
-
-// Did your code work? The line below will tell you!
-console.log(charEscape(html));
-
 var name = "Lilly Hope Borchardt"
-var role = "Front End Ninja"
+var role = "&nbsp; Front End Ninja"
 
 var formattedName = HTMLheaderName.replace("%data%", name);
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 
 $("#header").prepend(formattedName, formattedRole);
 
+var biopic = "http://lillyhb.com/images/about-image2.png";
+var formattedbioPic = HTMLbioPic.replace("%data%", biopic);
+$("#header").prepend(formattedbioPic);
+
 var bio={
 	"name" : "Lilly Hope Borchardt",
 	"role" : "Front End Ninja",
 	"contacts" : {
-		"email" : "hello@lillyhb.com",
-		"twitter" : "https://twitter.com/lillyborchardt",
-		"linkedin" : "https://www.linkedin.com/pub/lilly-borchardt",
-		"tumblr" : "http://lollyandbee.tumblr.com/",
-		"pinterest" : "http://www.pinterest.com/lollyborch/",
-		"location" : "Brisbane, Queensland, Australia"
+		"email" : "<a href='mailto:hello@lillyhb.com'>hello@lillyhb.com</a>",
+		"twitter" : "<a href='https://twitter.com/lillyborchardt'>@lillyborchardt</a>",
+		"linkedin" : "<a href='https://www.linkedin.com/pub/lilly-borchardt'>Lilly Borchardt</a>",
+		"location" : "Brisbane, Queensland, Australia",
+		"github" : "<a href='http://lollyborch.github.io/'>lollyborch</a>"
 	},
 	"pic" : "http://lillyhb.com/images/about-image2.png",
-	"welcome" : "My name is Lilly and I like to create things with pixels, vectors, and code.",
-	"skills" : ["graphic design", "publication design", "typography", "illustration", "social media wrangling", "web design", "HTML/CSS", "Javascript/jQuery", "JSON", "tea drinking", "kitten taming" ]
+	"welcome" : "Hello :) My name is Lilly and I like to create things with pixels, vectors, and code.  I am a designer &amp; front-end developer based in Brisbane, Australia.",
+	"skills" : ["graphic design", "typography", "illustration", "web design", "HTML/CSS", "Javascript/jQuery", "kitten taming" ]
 };
 
-$("#main").append(bio.welcome);
+bio.display = function() {
+  
+  $("#findme").prepend(HTMLcontactStart);
+
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  $("#topContacts").append(formattedEmail);
+  $("#footerContacts").append(formattedEmail);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+  $("#topContacts").append(formattedGithub);
+  $("#footerContacts").append(formattedGithub);
+  var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+  $("#topContacts").append(formattedLinkedin);
+  $("#footerContacts").append(formattedLinkedin);
+  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  $("#topContacts").append(formattedTwitter);
+  $("#footerContacts").append(formattedTwitter);
+  var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcome);
+  $("#aboutme").append(formattedWelcomeMsg);
+
+  if (bio.skills.length > 0) {
+	$("#madskills").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
+	$("#skills").append(formattedSkill);
+  }
+};
+
+
+
+
 
 
 var education = {
@@ -45,7 +74,7 @@ var education = {
 		{
 			"name" : "The University of Queensland",
 			"degree" : "Masters of Interaction Design",
-			"skills" : ["HTML/CSS", "Javascript/jQuery", "Human-Computer Interaction", "User Centered Design", "Python" ],
+			"skills" : ["HTML/CSS", "&nbsp; Javascript/jQuery", "&nbsp; Human-Computer Interaction", "&nbsp; User Centered Design" ],
 			"year" : "2016 (expected)",
 			"location" : "St Lucia, Queensland, Australia"
 
@@ -53,13 +82,14 @@ var education = {
 		{
 			"name" : "Udacity",
 			"degree" : "Front-End Web Developer Nanodegree",
-			"skills" : ["HTML & CSS", "Git and GitHub", "Javascript", "jQuery", "Object Oriented Javascript", "Website Performance Optimisation", "AJAX" ],
+			"skills" : ["HTML/CSS", "&nbsp; Javascript/jQuery" ],
 			"year" : "2015 (expected)"
 
 		},
 		{
 			"name" : "Grenadi School of Design",
 			"degree" : "Certificate in Web Design",
+			"skills" : ["HTML/CSS" ],
 			"year" : "2012",
 			"location" : "Melbourne, Victoria, Australia"
 
@@ -67,6 +97,7 @@ var education = {
 		{
 			"name" : "Grenadi School of Design",
 			"degree" : "Diploma of Graphic Design",
+			"skills" : ["Typography", "&nbsp; Publication Design", "&nbsp; Advertising", "&nbsp; Branding" ],
 			"year" : "2011",
 			"location" : "Melbourne, Victoria, Australia"
 
@@ -74,10 +105,37 @@ var education = {
 		{
 			"name" : "The University of Queensland",
 			"degree" : "Bachelor of Arts",
+			"skills" : ["Music" ],
 			"year" : "2008",
 			"location" : "St Lucia, Queensland, Australia"
 		}
+	],
+
+	"online": [
+		{
+			"title" : "Intro to HTML and CSS",
+			"school" : "Udacity",
+			"year" : "2014",
+			"url" : "https://www.udacity.com"
+
+		},
+		{
+			"title" : "Javascript Basics",
+			"school" : "Udacity",
+			"year" : "2014",
+			"url" : "https://www.udacity.com"
+
+		},
+		{
+			"title" : "Intro to jQuery",
+			"school" : "Udacity",
+			"year" : "2014",
+			"url" : "https://www.udacity.com"
+
+		}
 	]
+
+
 };
 
 var work = {
@@ -134,52 +192,12 @@ var projects = {
     {
       "title" : "Interactive Resume",
       "date" : "2014",
+      "pic" : ["images/project2.png"],
       "description" : "Udacity Project 2 - Javascript <a href='http://lollyborch.github.io/P2/P2.html'>http://lollyborch.github.io/P2/P2.html</a>"
-    },
-    {
-      "title" : "Classic Arcade Game Clone",
-      "date" : "TBC",
-      "description" : "Udacity Project 3 - Object Oriented Javascript"
-    },
-    {
-      "title" : "Website Optimisation",
-      "date" : "TBC",
-      "description" : "Udacity Project 4 - Website Optimisation"
-    },
-    {
-      "title" : "Neighbourhood Map",
-      "date" : "TBC",
-      "description" : "Udacity Project 5 - Javascript Design Patterns"
-    },
-    {
-      "title" : "Project 6",
-      "date" : "TBC",
-      "description" : "Udacity Project 6"
-    },
-    {
-      "title" : "Project 7",
-      "date" : "TBC",
-      "description" : "Udacity Project 7"
     }
   ]
 };
 
-if (bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-
-	var formattedSkill = HTMLskills.replace(
-		"%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace(
-		"%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace(
-		"%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace(
-		"%data%", bio.skills[3]);
-	$("#skills").append(formattedSkill);
-}
 
 function displayWork() {
 	for (job in work.design) {
@@ -198,10 +216,74 @@ function displayWork() {
 		//add work description
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.design[job].Description);
 		$(".work-entry:last").append(formattedDescription);
+
 	}
 }
 
+projects.display = function () {
+  for (item in projects.projects) {
+    $("#projects").append(HTMLprojectStart);
+
+      var formattedProjTitle = HTMLprojectTitle.replace("%data%", projects.projects[item].title);
+      $(".project-entry:last").append(formattedProjTitle);
+
+      var formattedProjDate = HTMLprojectDates.replace("%data%", projects.projects[item].date);
+      $(".project-entry:last").append(formattedProjDate);
+
+      var formattedProjDesc = HTMLprojectDescription.replace("%data%", projects.projects[item].description);
+      $(".project-entry:last").append(formattedProjDesc);
+
+      if (projects.projects[item].pic.length > 0) {
+        for (image in projects.projects[item].pic) {
+          var formattedProjImg = HTMLprojectImage.replace("%data%", projects.projects[item].pic[image]);
+          $(".project-entry:last").append(formattedProjImg);
+        }
+      }
+
+  }
+};
+
+education.display = function (){
+  for (university in education.uni) {
+  	$("#education").append(HTMLschoolStart);
+
+  	var formattedUnidegree = HTMLschoolDegree.replace("%data%", education.uni[university].degree);
+  	$(".education-entry:last").append(formattedUnidegree);
+
+  	var formattedUniname = HTMLschoolName.replace("%data%", education.uni[university].name);
+  	var formattedUnidate = HTMLschoolDates.replace("%data%", education.uni[university].year);
+  	var formattedUninamedate = formattedUniname + formattedUnidate ;
+  	$(".education-entry:last").append(formattedUninamedate);
+
+	var formattedUniskills = HTMLschoolMajor.replace("%data%", education.uni[university].skills);
+  	$(".education-entry:last").append(formattedUniskills);
+  }
+
+
+  $(".education-entry:last").append(HTMLonlineClasses);
+
+  for (course in education.online) {
+      
+	var formattedOnlinetitle =  HTMLonlineTitle.replace("%data%", education.online[course].title);
+	$(".education-entry:last").append(formattedOnlinetitle);
+	  
+	var formattedOnlineedu =  HTMLonlineSchool.replace("%data%", education.online[course].school);
+	var formattedOnlineyear =  HTMLonlineDates.replace("%data%", education.online[course].year);
+	var formattedOnlineEduYear = formattedOnlineedu + formattedOnlineyear ;
+	$(".education-entry:last").append(formattedOnlineEduYear);
+	   
+	var formattedOnlineURL =  HTMLonlineURL.replace("%data%", education.online[course].url).replace("#", education.online[course].url);
+	$(".education-entry:last").append(formattedOnlineURL);
+  
+  }
+
+}; 
+
+bio.display();
 displayWork();
+projects.display();
+education.display();
+
 
 //log x and y locations of clicks to console
 $(document).click(function(loc) {
@@ -236,35 +318,8 @@ function inName(name) {
 	return arrayname[0] + " " + arrayname[1] + " " + arrayname[2];
 
 }
-$('#main').prepend(internationalizeButton);
+$('#header').append(internationalizeButton);
 
-
-
-projects.display = function () {
-  for (item in projects.projects) {
-    $("#projects").append(HTMLprojectStart);
-
-      var formattedProjTitle = HTMLprojectTitle.replace("%data%", projects.projects[item].title);
-      $(".project-entry:last").append(formattedProjTitle);
-
-      var formattedProjDate = HTMLprojectDates.replace("%data%", projects.projects[item].date);
-      $(".project-entry:last").append(formattedProjDate);
-
-      var formattedProjDesc = HTMLprojectDescription.replace("%data%", projects.projects[item].description);
-      $(".project-entry:last").append(formattedProjDesc);
-
-      if (projects.projects[item].pic.length > 0) {
-        for (image in projects.projects[item].pic) {
-          var formattedProjImg = HTMLprojectImage.replace("%data%", projects.projects[item].pic[image]);
-          $(".project-entry:last").append(formattedProjImg);
-        }
-
-      }
-
-  }
-}
-
-projects.display();
 
 $("#mapDiv").append(googleMap);
 
